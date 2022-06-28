@@ -289,6 +289,7 @@ ul.column-2 {
 
 .km-header {
   background-color: var(--bg-color-gray);
+  padding-bottom: 1rem;
 }
 
 .km-header .container{
