@@ -8,6 +8,7 @@
     --clr-darkBlue: #00319E;
     --clr-text: #161616;
     --clr-orange: #FBAE17;
+    --clr-yel: #f6f624;
     --clr-bluePrimary: #19468D;
     --clr-red: #EA3223;
     --clr-blue-btn: #2488F6;
@@ -17,7 +18,7 @@
     --bg-color-gray: #f3f6f8;
     --bg-color-sec: #E7F5FF;
 
-    --clr-primary: #fb365e;
+    --clr-primary: #ef0010;
 
     --fz-btn: clamp(0.875rem, 0.775rem + 0.5vw, 1rem);
     --fz-heading: clamp(1rem, 1.025rem + 1vw, 1.375rem);
@@ -108,7 +109,13 @@ a {
   line-height: 1.3;
   font-weight: 700;
   letter-spacing: 0.8px;
-  color: var(--clr-primary);
+  color: var(--clr-darkBlue);
+  position: relative;
+}
+
+.km-sub-heading i {
+  padding-left: 2px;
+  transform: rotate(15deg) scale(120%) translateY(-2px);
 }
 
 .big-text {
@@ -205,6 +212,10 @@ ul.column-2 {
 }
 .text-red {
   color: var(--clr-red);
+}
+
+.text-yel {
+  color: var(--clr-yel);
 }
 
 /* =========================================
@@ -361,6 +372,7 @@ ul.column-2 {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   transition: 300ms;
   animation: 1.5s ease 0s infinite beat;
+  background-color: var(--clr-primary);
 }
 
 .showcase-cta i {
@@ -368,8 +380,8 @@ ul.column-2 {
   bottom: -18%;
   right: 20px;
   font-size: 40px;
-  transform: rotate(-35deg);
-  color: var(--clr-primary);
+  color: var(--clr-darkBlue);
+  transform-origin: top left;
 }
 
 /* =========================================
@@ -559,7 +571,7 @@ ul.column-2 {
 }
 
 .registration-form .form-cta h2 {
-  color: #FBAE17;
+  color: #00319E;
   margin-bottom: 5px;
 }
 
