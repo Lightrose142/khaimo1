@@ -196,7 +196,7 @@
                     <p class="km-text pd10">Đăng ký <strong class="text-yel">NGAY HÔM NAY</strong> để nhận <span class="inline">QUÀ TẶNG khóa học</span> <span class="strong">“5 ngày nắm vững phát âm IPA và đọc từ điển”</span> - trị giá <span class="strong text-yel">999.000đ</span>
                     </p>
                     <p class="km-text">thời gian nhận quà còn:</p>
-                    <strong class="km-heading text-yel">00 : 00 : 00</strong>
+                    <strong id="endDay-countdown" class="km-heading text-yel">00 : 00 : 00</strong>
                 </div>
             </div>
             <div class="registration-form text-center">
@@ -283,15 +283,31 @@
 
         let distance = countDownDay - now
 
-        let hours = Math.floor(distance / (1000 * 60 * 60));
-        let mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        let sec = Math.floor((distance % (1000 * 60)) / 1000);
-        const x = setInterval(function () {
-            
-        }, 1000)
-    }    
+        if (distance > 0) {
+            let hours = Math.floor(distance / (1000 * 60 * 60));
+            let mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let sec = Math.floor((distance % (1000 * 60)) / 1000)
 
-    countdown()
+            let timeRemain = {}
+    
+            return timeRemain = {
+                hours,
+                mins,
+                sec
+            }
+        } else {
+            countdown()
+        }
+
+    } 
+
+    const x = setInterval(function () {
+        const endDay = document.querySelector('#endDay-countdown')
+        endDay.innerHTML = `${countdown().hours} : ${countdown().mins} : ${countdown().sec}`
+    }, 1000)
+    
+    
+
 
     // countdown
     var countDownDate = new Date("August 29, 2022 15:37:25").getTime();
