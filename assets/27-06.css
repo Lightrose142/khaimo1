@@ -310,7 +310,7 @@ ul.column-2 {
 
 @keyframes beat {
   0%, 100% { transform: scale(1, 1); }
-  50% { transform: scale(0.98, 0.98); }
+  50% { transform: scale(0.95, 0.95); }
 }
 
 @keyframes beat2 {
@@ -395,8 +395,8 @@ ul.column-2 {
   margin: 0 0 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   transition: 300ms;
-  animation: 1.5s ease 0s infinite beat;
   background-color: var(--clr-primary);
+  animation: 1s ease infinite beat;
 }
 
 .showcase-cta i {
