@@ -491,7 +491,7 @@ ul.column-2 {
     why-list section
 ============================================================ */
 .why-list ul > ::marker {
-  content: '\f101';
+  content: '\f071';
 }
 /* =========================================
     achive section
