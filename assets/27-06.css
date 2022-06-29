@@ -195,6 +195,18 @@ ul.column-2 {
   text-transform: uppercase;
 }
 
+.km-link {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--clr-blue-btn);
+}
+
+.km-link i {
+  padding-right: 5px;
+  font-size: 27px;
+  transform: translateY(4px);  
+}
+
 /* =========================================
     text color
 ============================================================ */
@@ -638,10 +650,8 @@ input[type="email"],
   gap: 10px;
 }
 
-.about-content .km-link {
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--clr-blue-btn);
+.about-content .km-link i {
+  color: red;
 }
 
 .about-info {
