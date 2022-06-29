@@ -266,7 +266,7 @@ ul.column-2 {
   color: rgb(235, 235, 235);
   font-size: clamp(16px, 14px + 1.5vw, 50px);
   background-color: red;
-  padding: 1em 1.2em;
+  padding: 0.8em 1em;
   border-radius: 100vw;
 }
 
