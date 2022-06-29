@@ -266,7 +266,7 @@ ul.column-2 {
   color: rgb(235, 235, 235);
   font-size: clamp(16px, 14px + 1.5vw, 50px);
   background-color: red;
-  padding: 24px 30px;
+  padding: 1em 1.2em;
   border-radius: 100vw;
 }
 
@@ -395,6 +395,15 @@ ul.column-2 {
   transform-origin: top left;
 }
 
+.showcase-cta .arrow {
+  position: absolute;
+  bottom: 20%;
+  left: -50px;
+  font-size: 40px;
+  color: var(--clr-darkBlue);
+  transform-origin: top left;
+}
+
 /* =========================================
     achives section
 ============================================================ */
@@ -430,7 +439,7 @@ ul.column-2 {
   opacity: 0.2;
   position: absolute;
   top: 8%;
-  left: 85%;
+  left: 80%;
 }
 
 .swiper-button-next:after,
