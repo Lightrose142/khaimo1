@@ -155,7 +155,7 @@ a {
   margin: 20px auto;
   padding: 0.475em 1.25em;
   cursor: pointer;
-  background-color: var(--clr-blue-btn);
+  background-color: var(--clr-orange);
   color: var(--clr-white);    
   font-size: var(--fz-btn);
   border-radius: 100vw;
@@ -518,7 +518,7 @@ ul.column-2 {
 
 .course__info-item {
   /* background-color: #161616; */
-  padding: 1rem;
+  padding: 1rem 1rem 0;
   border-radius: 5px;
   color: var(--clr-white);
   display: flex;
@@ -535,6 +535,7 @@ ul.column-2 {
   background-color: #ffffff1f;
   border-radius: 20px;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 .course__time > p {
@@ -610,10 +611,6 @@ ul.column-2 {
   background-color: #fff;
 }
 
-.registration-form.box {
-  row-gap: 10px;
-}
-
 .registration-form .form-cta p {
   margin-bottom: 15px;
 }
@@ -621,6 +618,11 @@ ul.column-2 {
 .registration-form .form-cta h2 {
   color: #00319E;
   margin-bottom: 5px;
+}
+
+.registration-form .btn {
+  color: var(--clr-text);
+  font-weight: 700;
 }
 
 input[type="text"],
