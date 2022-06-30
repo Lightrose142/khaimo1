@@ -87,6 +87,7 @@ a {
 
 .section {
   padding-block: var(--section-padding);
+  position: relative;
 }
 
 .container {
@@ -213,6 +214,35 @@ ul.column-2 {
   padding-right: 5px;
   font-size: 27px;
   transform: translateY(4px);  
+}
+
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 0px 20px;
+}
+
+/* =========================================
+    shape divder
+============================================================ */
+
+.custom-shape-divider-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 20px;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+  fill: #FFFFFF;
 }
 
 /* =========================================
@@ -569,10 +599,10 @@ ul.column-2 {
 
 .course__time-detail {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: flex-start;
   text-align: left;
-  gap: 10px;
+  gap: 2rem;
 }
 
 .course__info .contact-support p {
@@ -660,11 +690,78 @@ input[type="email"],
   width: 100%;
 }
 
+/* ==================================================
+   AFTER REGISTRATION
+====================================================
+*/
+
+.after-registration {
+  display: block;
+  background-color: var(--bg-color-gray);
+}
+
+.after-registration .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.border {
+  border: 3px solid #cdcdcd;
+}
+
+
+
+.after-registration h1 {
+  color:var(--clr-green);
+}
+
+.countdown-time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.countdown .countdown-prefix {
+  color: var(--clr-text-light);
+  font-size: 18px;
+}
+
+.countdown .countdow-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.countdown .countdown-number {
+  font-size: 2rem;
+  color: var(--clr-red);
+  font-weight: 800;
+  letter-spacing: 5px;
+  text-indent: 4px;
+}
+
+.countdown .countdown-date {
+  font-size: 18px;
+  color: var(--clr-text-light);
+}
+
+[countdown-compact] {
+  color: var(--clr-red);
+  font-weight: 700;
+}
+
+
+
 
 /* =========================================
     about section
 ============================================================ */
-
 .about .container {
   display: flex;
   justify-content: center;

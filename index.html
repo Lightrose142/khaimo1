@@ -32,7 +32,48 @@
             </div>
         </div>
     </header>
+    <!--////////////////////// after registration //////////////////////// -->
+    <section id="registration" class="after-registration section">
+        <div class="container text-center">
+            <h1 class="km-heading">Bạn đã đăng ký thành công!</h1>
+            <p class="km-text text-red strong pd20">
+                Buổi học 1: Khai mở - Vì sao học cả đời vẫn không giỏi tiếng Anh?
+            </p>
+            <div class="course__time box-shadow border">
+                <p class="km-text">Theo giờ Việt Nam (GMT+7)</p>
 
+                <div class="course__time-detail">
+                    <div class="course__time-item">
+                        <i class="fa-solid fa-calendar-days fa-bounce"></i>
+                        <p class="km-text">13/04/2022</p>
+                    </div>
+                    <div class="course__time-item">
+                        <i class="fa-solid fa-clock fa-bounce"></i>
+                        <p class="km-text">8 PM</p>
+                    </div>
+                </div>
+            </div>
+            <div class="countdown">
+                <div class="countdown-prefix">Bắt đầu sau:</div>
+                <div id="countdown" class="countdown-time">
+                    
+                </div>
+            </div>
+
+            <p class="km-text pd20">
+                <span class="text-red strong">*Lưu ý: Lớp học sẽ <span class="text-blue">TỰ ĐỘNG được mở ra ở ngay đây</span> khi đến giờ. Xin đừng đóng trình duyệt.</span>
+            </p>
+            <p class="km-text pd20 w800">
+                <span class="text-gray">Phần quà tặng khóa học <strong>"5 ngày nắm vững phát âm IPA và đọc từ điển"</strong> - trị giá <span class="text-red">1.000.000VNĐ</span> <strong>chỉ được tặng</strong> sau khi bạn tham dự hết buổi học này! <strong class="text-red">ĐỪNG BỎ LỠ NHÉ!</strong></span>
+            </p>
+        </div>
+        <div class="custom-shape-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+<!-- ////////////////////////////////// SHOWCASE ////////////////////////////// -->
     <section class="showcase">
         <div class="container">
             <div class="showcase-info">
@@ -55,7 +96,7 @@
             </div>
         </div>
     </section>
-
+<!-- /////////////////////////////// REASON LIST /////////////////////////////-->
     <section class="section reason-list">
         <div class="container">
             <h3 class="km-sub-heading text-center">BẠN CÓ BIẾT<i class="fa-solid fa-question"></i></h3>
@@ -76,7 +117,7 @@
         </div>
     </section>
 
-    <!-- testimonial -->
+    <!--///////////////////////////  testimonial ////////////////////////-->
     <section class="testimonial text-center section">
         <div class="container">
             <div class="swiper box">
@@ -99,6 +140,11 @@
                 <div class="swiper-button-next"></div>
             </div>
         </div>
+        <div class="custom-shape-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+            </svg>
+        </div>
     </section>
 
     <!-- ////////////////// Video khóa học  /////////////////////// -->
@@ -119,7 +165,7 @@
             </div>
         </div>
     </section>
-
+<!-- ///////////////////////// WHY ////////////////////////////////////// -->
     <section class="section why-list">
         <div class="container">
             <h3 class="km-sub-heading text-center">
@@ -141,7 +187,7 @@
             </div>
         </div>
     </section>
-
+<!-- ////////////////// ACHIVEMENT//////////////////////////////// -->
     <section class="section achives">
         <div class="container">
             <h2 class="km-heading text-center">
@@ -158,7 +204,7 @@
             </div>
         </div>
     </section>
-
+<!-- ///////////////////////////// REGISTOR FORM /////////////////////////////// -->
     <section id="form-registor" class="section course__info">
         <div class="container">
             <div class="course__info-item text-center">
@@ -212,7 +258,7 @@
                     <input id="phone" type="tel" name="phone" placeholder="*Số điện thoại..." required>
                     <input type="text" name="name" placeholder="*Tên của bạn..." required>
                     <input type="email" name="email" placeholder="*Email của bạn..." required>
-                    <button class="btn" type="submit">Đăng ký đăng ký tham gia<br>và nhận khóa học phát âm IPA 5 ngày</button>
+                    <button class="btn" type="submit">Đăng ký tham gia<br>và nhận khóa học phát âm IPA 5 ngày</button>
                 </form>
                 
                 <div class="form-cta">
@@ -230,8 +276,9 @@
                 <a href="tel:0973979109"><span class="text-yel">097.397.9109</span></a>
             </span>
         </div>
-    </section>
-
+    </section>    
+    
+    <!--//////////////////////// ABOUTSECTION///////////////////////////  -->
     <section class="about section">
         <div class="container">
             <div class="about-info">
@@ -271,7 +318,7 @@
 </body>
 <script>
     
-    function countdown() {
+    function countDownForDay() {
         let endOfDay = new Date()
         endOfDay.setHours(23, 59, 59, 999)
         let x = setInterval(function() {
@@ -291,82 +338,82 @@
                 endDay.innerHTML = `${hours} : ${mins} : ${sec}`
 
             } else {
-                countdown()
+                countDownForDay()
         }           
 
         }, 1000)
 
     }
 
-    countdown()
+    countDownForDay()
 
 
 
     // countdown
     var countDownDate = new Date("August 29, 2022 15:37:25").getTime();
-    // var x = setInterval(function() {
+    var x = setInterval(function() {
 
-    //     var now = new Date().getTime();
+        var now = new Date().getTime();
 
-    //     var distance = countDownDate - now;
+        var distance = countDownDate - now;
 
-    //     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    //     var hours = Math.floor(distance / (1000 * 60 * 60));
-    //     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    //     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(distance / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    //     document.getElementById("countdown").innerHTML = `
-    //                     <div id="hour" class="countdow-item">
-    //                     <span class="countdown-number">${hours}</span>
-    //                     <span class="countdown-date">giờ</span>
-    //                     </div>
-    //                     <div id="mins" class="countdow-item">
-    //                     <span class="countdown-number">${minutes}</span>
-    //                     <span class="countdown-date">phút</span>
-    //                     </div>
-    //                     <div id="secs" class="countdow-item">
-    //                     <span class="countdown-number">${seconds}</span>
-    //                     <span class="countdown-date">giây</span>
-    //                     </div>`;
+        document.getElementById("countdown").innerHTML = `
+                        <div id="hour" class="countdow-item">
+                        <span class="countdown-number">${hours}</span>
+                        <span class="countdown-date">giờ</span>
+                        </div>
+                        <div id="mins" class="countdow-item">
+                        <span class="countdown-number">${minutes}</span>
+                        <span class="countdown-date">phút</span>
+                        </div>
+                        <div id="secs" class="countdow-item">
+                        <span class="countdown-number">${seconds}</span>
+                        <span class="countdown-date">giây</span>
+                        </div>`;
         
-    //     // countdown trên header
-    //     document.querySelector('[countdown-compact]').innerHTML = `${hours} : ${minutes} : ${seconds}`
+        // countdown trên header
+        document.querySelector('[countdown-compact]').innerHTML = `${hours} : ${minutes} : ${seconds}`
 
-    //     if (distance < 0) {
-    //         clearInterval(x);
+        if (distance < 0) {
+            clearInterval(x);
 
-    //         document.getElementById("registration").innerHTML = `
-    //                 <div class="container text-center">
-    //                     <h2 style="color: var(--color-red);">Rất tiếc khóa học này đã kết thúc rồi!</h2>
+            document.getElementById("registration").innerHTML = `
+                    <div class="container text-center">
+                        <h2 style="color: var(--color-red);">Rất tiếc khóa học này đã kết thúc rồi!</h2>
                         
-    //                     <div class="contact-support">
-    //                         <p>Liên hệ ngay hotline nếu bạn cần giúp đỡ:</p>
-    //                         <span>
-    //                             <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //                                 <circle cx="17.5" cy="17" r="17" fill="#25DAC5"/>
-    //                                 <path d="M19.6649 19.74L20.7849 18.62C20.9358 18.471 21.1267 18.3691 21.3343 18.3265C21.542 18.2839 21.7576 18.3025 21.9549 18.38L23.3199 18.925C23.5193 19.006 23.6903 19.1441 23.8113 19.3221C23.9324 19.5 23.998 19.7098 23.9999 19.925V22.425C23.9988 22.5714 23.968 22.716 23.9095 22.8502C23.8509 22.9844 23.7659 23.1054 23.6594 23.2058C23.5528 23.3062 23.4271 23.3841 23.2897 23.4346C23.1523 23.4852 23.0061 23.5074 22.8599 23.5C13.2949 22.905 11.3649 14.805 10.9999 11.705C10.983 11.5528 10.9985 11.3987 11.0454 11.2529C11.0923 11.1071 11.1695 10.9728 11.272 10.859C11.3745 10.7452 11.4999 10.6543 11.64 10.5925C11.7801 10.5306 11.9318 10.4991 12.0849 10.5H14.4999C14.7154 10.5007 14.9258 10.5658 15.104 10.6869C15.2822 10.8081 15.4201 10.9798 15.4999 11.18L16.0449 12.545C16.1251 12.7416 16.1455 12.9573 16.1037 13.1654C16.0619 13.3735 15.9597 13.5647 15.8099 13.715L14.6899 14.835C14.6899 14.835 15.3349 19.2 19.6649 19.74Z" fill="white"/>
-    //                             </svg>
-    //                             <a href="tel:0973979109" id="date">097.397.9109</a>
-    //                         </span>
-    //                     </div>
-    //                 </div>`;
+                        <div class="contact-support">
+                            <p>Liên hệ ngay hotline nếu bạn cần giúp đỡ:</p>
+                            <span>
+                                <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="17.5" cy="17" r="17" fill="#25DAC5"/>
+                                    <path d="M19.6649 19.74L20.7849 18.62C20.9358 18.471 21.1267 18.3691 21.3343 18.3265C21.542 18.2839 21.7576 18.3025 21.9549 18.38L23.3199 18.925C23.5193 19.006 23.6903 19.1441 23.8113 19.3221C23.9324 19.5 23.998 19.7098 23.9999 19.925V22.425C23.9988 22.5714 23.968 22.716 23.9095 22.8502C23.8509 22.9844 23.7659 23.1054 23.6594 23.2058C23.5528 23.3062 23.4271 23.3841 23.2897 23.4346C23.1523 23.4852 23.0061 23.5074 22.8599 23.5C13.2949 22.905 11.3649 14.805 10.9999 11.705C10.983 11.5528 10.9985 11.3987 11.0454 11.2529C11.0923 11.1071 11.1695 10.9728 11.272 10.859C11.3745 10.7452 11.4999 10.6543 11.64 10.5925C11.7801 10.5306 11.9318 10.4991 12.0849 10.5H14.4999C14.7154 10.5007 14.9258 10.5658 15.104 10.6869C15.2822 10.8081 15.4201 10.9798 15.4999 11.18L16.0449 12.545C16.1251 12.7416 16.1455 12.9573 16.1037 13.1654C16.0619 13.3735 15.9597 13.5647 15.8099 13.715L14.6899 14.835C14.6899 14.835 15.3349 19.2 19.6649 19.74Z" fill="white"/>
+                                </svg>
+                                <a href="tel:0973979109" id="date">097.397.9109</a>
+                            </span>
+                        </div>
+                    </div>`;
             
-    //         // header section đã kết thúc
-    //         document.querySelector('[headerRegisterd]').innerHTML = `
-    //             <p class="km-p-heading text-center"><span class="text-red">Rất tiếc khóa học này đã kết thúc rồi!</span></p>
-    //             <div class="contact-support">
-    //                 <p class="km-text">Liên hệ hotline nếu bạn cần hỗ trợ:</p>
-    //                 <span>
-    //                     <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-    //                         <circle cx="17.5" cy="17" r="17" fill="#25DAC5"/>
-    //                         <path d="M19.6649 19.74L20.7849 18.62C20.9358 18.471 21.1267 18.3691 21.3343 18.3265C21.542 18.2839 21.7576 18.3025 21.9549 18.38L23.3199 18.925C23.5193 19.006 23.6903 19.1441 23.8113 19.3221C23.9324 19.5 23.998 19.7098 23.9999 19.925V22.425C23.9988 22.5714 23.968 22.716 23.9095 22.8502C23.8509 22.9844 23.7659 23.1054 23.6594 23.2058C23.5528 23.3062 23.4271 23.3841 23.2897 23.4346C23.1523 23.4852 23.0061 23.5074 22.8599 23.5C13.2949 22.905 11.3649 14.805 10.9999 11.705C10.983 11.5528 10.9985 11.3987 11.0454 11.2529C11.0923 11.1071 11.1695 10.9728 11.272 10.859C11.3745 10.7452 11.4999 10.6543 11.64 10.5925C11.7801 10.5306 11.9318 10.4991 12.0849 10.5H14.4999C14.7154 10.5007 14.9258 10.5658 15.104 10.6869C15.2822 10.8081 15.4201 10.9798 15.4999 11.18L16.0449 12.545C16.1251 12.7416 16.1455 12.9573 16.1037 13.1654C16.0619 13.3735 15.9597 13.5647 15.8099 13.715L14.6899 14.835C14.6899 14.835 15.3349 19.2 19.6649 19.74Z" fill="white"/>
-    //                     </svg>
-    //                     <a href="tel:+84973979109" id="date">097 397 9109</a>
-    //                 </span>
-    //             </div>
-    //         `
-    //     }
-    // }, 1000);
+            // header section đã kết thúc
+            document.querySelector('[headerRegisterd]').innerHTML = `
+                <p class="km-p-heading text-center"><span class="text-red">Rất tiếc khóa học này đã kết thúc rồi!</span></p>
+                <div class="contact-support">
+                    <p class="km-text">Liên hệ hotline nếu bạn cần hỗ trợ:</p>
+                    <span>
+                        <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="17.5" cy="17" r="17" fill="#25DAC5"/>
+                            <path d="M19.6649 19.74L20.7849 18.62C20.9358 18.471 21.1267 18.3691 21.3343 18.3265C21.542 18.2839 21.7576 18.3025 21.9549 18.38L23.3199 18.925C23.5193 19.006 23.6903 19.1441 23.8113 19.3221C23.9324 19.5 23.998 19.7098 23.9999 19.925V22.425C23.9988 22.5714 23.968 22.716 23.9095 22.8502C23.8509 22.9844 23.7659 23.1054 23.6594 23.2058C23.5528 23.3062 23.4271 23.3841 23.2897 23.4346C23.1523 23.4852 23.0061 23.5074 22.8599 23.5C13.2949 22.905 11.3649 14.805 10.9999 11.705C10.983 11.5528 10.9985 11.3987 11.0454 11.2529C11.0923 11.1071 11.1695 10.9728 11.272 10.859C11.3745 10.7452 11.4999 10.6543 11.64 10.5925C11.7801 10.5306 11.9318 10.4991 12.0849 10.5H14.4999C14.7154 10.5007 14.9258 10.5658 15.104 10.6869C15.2822 10.8081 15.4201 10.9798 15.4999 11.18L16.0449 12.545C16.1251 12.7416 16.1455 12.9573 16.1037 13.1654C16.0619 13.3735 15.9597 13.5647 15.8099 13.715L14.6899 14.835C14.6899 14.835 15.3349 19.2 19.6649 19.74Z" fill="white"/>
+                        </svg>
+                        <a href="tel:+84973979109" id="date">097 397 9109</a>
+                    </span>
+                </div>
+            `
+        }
+    }, 1000);
     
     // swiper
 
