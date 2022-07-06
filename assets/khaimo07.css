@@ -24,7 +24,7 @@
   --fz-heading: clamp(1.5625rem, 2vw + 1rem, 1.875rem);
   --fz-subHeading: clamp(0.875rem, 1vw + 0.375rem, 1rem);
   --fz-secHeading: clamp(1.125rem, 0.5rem + 1.2vw, 1.25rem);
-  --fz-text: clamp(1.0625rem, 0.9rem + 1.2vw, 1.125rem);
+  --fz-text: clamp(1.0625rem, 0.9rem + 1.1vw, 1.25rem);
 
   --fz-family: "Noto Sans", sans-serif;
 }
@@ -45,13 +45,12 @@ body {
 }
 body {
   font-family: "Roboto", sans-serif;
-  line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: "roboto", sans-serif;
   font-weight: 400;
   font-size: var(--fz-text);
-  line-height: 1.4;
+  line-height: 1.5;
   background-color: var(--bg-color);
   color: var(--clr-text);
 }
@@ -109,7 +108,7 @@ a {
 }
 
 .container {
-  width: min(100% - 1.25rem, 56.25rem);
+  width: min(100% - 20px, 56.25rem);
   margin: 0 auto;
 }
 
@@ -266,6 +265,7 @@ ul div.list-wrap {
 ul div i {
   font-size: 30px;
   color: var(--clr-primary);
+  margin-top: 5px;
 }
 
 /* =========================================
@@ -398,7 +398,7 @@ ul div i {
 ============================================ */
 
 .testimonial {
-  background-image: url("../assets/img/background.jpg"), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-image: url("../assets/img/background-review.jpg"), linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   background-size: cover;
   background-position: top left;
   background-blend-mode: overlay;
@@ -456,6 +456,10 @@ ul div i {
   --color: #1e0e62;
 }
 
+.checkpoints ul {
+  margin-left: -10px;
+}
+
 .checkpoints .list-wrap h3 {
   font-size: clamp(1.5rem, 1.5vw + 1rem, 2rem);
   margin-bottom: 15px;
@@ -483,7 +487,7 @@ ul div i {
 ============================================================ */
 
 .course {
-  background-image: url("../assets/img/background.jpg"), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-image: url("../assets/img/background-review.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover;
   background-position: top left;
   background-blend-mode: overlay;
@@ -641,11 +645,12 @@ input:-webkit-autofill:active {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .about-info img {
   border-radius: 100vw;
-  width: 250px;
+  width: 200px;
   border: 5px solid var(--bg-color-gray);
 }
 
