@@ -170,7 +170,7 @@ a {
 
 .km-text {
   font-size: var(--fz-text);
-  margin-bottom: 0.375em;
+  margin-bottom: 0.475em;
 }
 
 .strong,
@@ -311,29 +311,37 @@ ul div i {
 ============================================================ */
 .text-primary {
   color: var(--clr-primary);
+  opacity: 1;
 }
 .text-gray {
   color: var(--clr-text-gray);
+  opacity: 1;
 }
 .text-org {
   color: var(--clr-orange);
+  opacity: 1;
 }
 .text-org-2 {
   color: var(--clr-org-2);
+  opacity: 1;
 }
 .text-blue {
   color: var(--clr-darkBlue);
+  opacity: 1;
 }
 
 .text-green {
   color: var(--clr-green);
+  opacity: 1;
 }
 .text-red {
   color: var(--clr-red);
+  opacity: 1;
 }
 
 .text-yel {
   color: var(--clr-yel);
+  opacity: 1;
 }
 
 /* =========================================
