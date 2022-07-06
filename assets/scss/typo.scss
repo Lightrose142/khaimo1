@@ -1,0 +1,24 @@
+$fz-heading: clamp(1.5rem, 5vw + 1rem, 1.5625rem);
+$fz-sec-heading: clamp(1.25rem, 5vw + 1rem, 1.5rem);
+$fz-sub-heading: clamp(1rem, 5vw + 0.825rem, 1.0625rem);
+$fz-text: clamp(1.0625rem, 5vw + 0.875rem, 1.125rem);
+
+
+.main-heading {
+    font-size: $fz-heading;
+    font-weight: 700;
+    line-height: 1.3;        
+}
+
+.sec-heading {
+    font-size: $fz-heading;
+    font-weight: 700;
+    line-height: 1.3;  
+}
+
+.sub-heading {
+    font-size: $fz-sub-heading;
+    font-weight: 500;
+    line-height: 1.3;
+    text-transform: uppercase;
+}

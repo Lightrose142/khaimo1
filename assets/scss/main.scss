@@ -1,0 +1,8 @@
+$test: red;
+
+h2 {
+    font-size: 2rem;
+    color: $test;
+}
+
+@import 'button'

@@ -12,7 +12,7 @@
     --clr-org-2: #c09d13;
     --clr-yel: #f6f624;
     --clr-bluePrimary: #19468D;
-    --clr-red: #EA3223;
+    --clr-red: #ea2b2b;
     --clr-blue-btn: #2488F6;
     --clr-green: #A3CB38;
     --bg-color-transparent: rgba(255, 255, 255, 0.8);
@@ -20,7 +20,7 @@
     --bg-color-gray: #f3f6f8;
     --bg-color-sec: #E7F5FF;
 
-    --clr-primary: #ef0010;
+    --clr-primary: #ea2b2b;
 
     --fz-btn: clamp(1.025rem, 0.775rem + 0.5vw, 1.125rem);
     --fz-heading: clamp(1rem, 1.025rem + 1vw, 1.375rem);
