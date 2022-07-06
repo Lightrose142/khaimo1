@@ -323,7 +323,7 @@
 </body>
 <script>
     
-    function countDownForDay() {
+    function countDownForDay(selector) {
         let endOfDay = new Date()
         endOfDay.setHours(23, 59, 59, 999)
         let x = setInterval(function() {
@@ -334,7 +334,7 @@
 
             let distance = countDownDay - now
 
-            const endDay = document.querySelector('#endDay-countdown')
+            const endDay = document.querySelector(selector)
             if (!endDay) return
                 
             if (distance > 0) {
@@ -352,7 +352,7 @@
 
     }
 
-    countDownForDay()
+    countDownForDay('#endDay-countdown')
 
 
 
