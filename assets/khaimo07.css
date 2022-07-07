@@ -298,9 +298,6 @@ ul div.list-wrap {
   column-gap: 10px;
 }
 
-.list-wrap p {
-}
-
 ul div i {
   font-size: 30px;
   color: var(--clr-primary);
