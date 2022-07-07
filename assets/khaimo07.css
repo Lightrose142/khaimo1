@@ -137,7 +137,7 @@ a {
 }
 
 .km-heading.big {
-  font-size: clamp(1.675rem, 2vw + 1.5rem, 2.1875rem);
+  font-size: clamp(1.775rem, 2vw + 1rem, 2.025rem);
 }
 
 .km-sec-heading {
