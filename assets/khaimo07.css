@@ -451,7 +451,7 @@ ul div i {
   padding-top: 1rem;
 }
 
-.showcase .km-sub-heading {
+.showcase h3 {
   color: white;
   opacity: 0.9;
 }
@@ -471,6 +471,16 @@ ul div i {
 
 .showcse-person {
   display: none;
+}
+
+.showcase-content p {
+  font-size: 17px;
+}
+
+.gift-note i {
+  position: relative;
+  top: 2px;
+  font-size: 13px;
 }
 
 @media (min-width: 768px) {
