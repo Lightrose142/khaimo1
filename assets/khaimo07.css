@@ -381,6 +381,19 @@ ul div i {
 .pd30 {
   padding-bottom: 30px;
 }
+/* =========================================
+      margin bottom
+  ============================================================ */
+
+.mb10 {
+  margin-bottom: 10px;
+}
+.mb20 {
+  margin-bottom: 20px;
+}
+.mb30 {
+  margin-bottom: 30px;
+}
 
 /* =========================================
     header
@@ -431,7 +444,6 @@ ul div i {
   background-size: cover;
   background-position: top left;
   background-blend-mode: overlay;
-  isolation: isolate;
   color: #fff;
 }
 
@@ -450,7 +462,7 @@ ul div i {
 
 .showcase-content .km-text,
 .showcase-content .km-heading {
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
 }
 
 .showcase-content .km-text {
