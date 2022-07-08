@@ -476,7 +476,7 @@ ul div i {
   display: none;
 }
 
-.showcase-content .km-text.small-text {
+.showcase-content .small-text {
   font-size: clamp(15px, 1.5vw, 16px);
 }
 
