@@ -15,6 +15,7 @@
   --clr-red: #e43c1b;
   --clr-blue-btn: #2488f6;
   --clr-green: #a3cb38;
+  --clr-green-500: #00fb0a;
   --bg-color-transparent: rgba(255, 255, 255, 0.8);
   --bg-color: #fff;
   --bg-color-gray: #f3f6f8;
@@ -348,6 +349,11 @@ ul div i {
   color: var(--clr-green);
   opacity: 1;
 }
+.text-green-2 {
+  color: var(--clr-green-500);
+  opacity: 1;
+}
+
 .text-red {
   color: var(--clr-red);
   opacity: 1;
