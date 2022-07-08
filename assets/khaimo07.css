@@ -477,11 +477,11 @@ ul div i {
 }
 
 .showcase-content .small-text {
-  font-size: clamp(15px, 1.5vw, 16px);
+  font-size: clamp(0.9375rem, 1.5vw, 1rem);
 }
 
 .showcase-content .xs-text {
-  font-size: clamp(13px, 1.5vw, 14px);
+  font-size: clamp(0.8125rem, 1.5vw, 0.875rem);
 }
 
 @media (min-width: 768px) {
