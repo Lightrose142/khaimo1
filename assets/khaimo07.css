@@ -372,6 +372,9 @@ ul div i {
       padding
   ============================================================ */
 
+.pd5 {
+  padding-bottom: 5px;
+}
 .pd10 {
   padding-bottom: 10px;
 }
@@ -474,7 +477,7 @@ ul div i {
 }
 
 .showcase-content .km-text.small-text {
-  font-size: clamp(15px, 1vw, 16px);
+  font-size: clamp(15px, 1.5vw, 16px);
 }
 
 .showcase-content .xs-text {
