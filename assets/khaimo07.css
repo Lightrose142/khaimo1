@@ -473,8 +473,12 @@ ul div i {
   display: none;
 }
 
-.showcase-content p {
+.showcase-content .km-text.small-text {
   font-size: 17px;
+}
+
+.showcase-content .xs-text {
+  font-size: 15px;
 }
 
 .gift-note i {
