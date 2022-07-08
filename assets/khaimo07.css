@@ -111,10 +111,14 @@ a {
 }
 
 .container {
-  width: min(100% - 20px, 56.25rem);
+  width: min(100% - 20px, 65rem);
   margin: 0 auto;
 }
 
+.w900 {
+  max-width: 900px;
+  margin-inline: auto;
+}
 .w800 {
   max-width: 800px;
   margin-inline: auto;
