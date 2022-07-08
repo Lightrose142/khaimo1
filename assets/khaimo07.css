@@ -481,7 +481,7 @@ ul div i {
 }
 
 .showcase-content .xs-text {
-  font-size: clamp(12px, 1vw, 14px);
+  font-size: clamp(13px, 1.5vw, 14px);
 }
 
 @media (min-width: 768px) {
