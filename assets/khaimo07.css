@@ -233,8 +233,8 @@ strong {
 }
 
 .btn {
-  display: inline-block;
-  max-width: 420px;
+  display: block;
+  max-width: max-content;
   min-width: 150px;
   margin: 10px auto;
   padding: 0.475em 1.25em;
@@ -485,6 +485,10 @@ ul div i {
     grid-template-columns: 1.5fr 1fr;
     align-items: center;
     justify-items: center;
+  }
+
+  .showcase .btn {
+    display: inline-block;
   }
 }
 
