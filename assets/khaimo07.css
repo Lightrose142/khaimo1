@@ -102,7 +102,7 @@ a {
 }
 
 /* =========================================
-      ultilities
+      utilities
   ============================================================ */
 
 .section {
@@ -313,6 +313,11 @@ ul div i {
   background-color: red;
 }
 
+.box-with-border {
+  padding: 0.875em;
+  border: 2px solid #ffffff;
+}
+
 /* =========================================
     font size
 ============================================================ */
@@ -480,7 +485,7 @@ ul div i {
     display: block;
   }
 
-  .showcase .container {
+  .showcase .showcase-main {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     align-items: center;
@@ -640,11 +645,6 @@ ul div i {
   gap: 15px;
 }
 
-.course__info {
-  padding: 0.875em;
-  border: 2px solid #ffffff;
-}
-
 .course__gift .course__gift-icon {
   font-size: clamp(2rem, 2vw + 1rem, 4rem);
   margin-block: 0.5rem 1rem;
@@ -756,8 +756,16 @@ input:-webkit-autofill:active {
 }
 
 /* =========================================
+    after-registration
+============================================================ */
+.course-in-progess {
+  background-color: rgba(0, 25, 252, 0.1);
+}
+
+/* =========================================
     footer
 ============================================================ */
+
 footer {
   background-color: #333;
   color: white;

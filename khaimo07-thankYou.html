@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đăng ký thành công khóa học</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="./assets/khaimo07.css" />
+
+    <style>
+      .thank-you_page {
+        background-image: url("../assets/img/background-review.jpg"),
+          linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+        background-size: cover;
+        background-position: top left;
+        background-blend-mode: overlay;
+        color: #fff;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .thank-you_page .container {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="section thank-you_page">
+        <header class="km-header">
+          <div class="container">
+            <div class="logo">
+              <img src="./assets/img/Logo-Full.svg" alt="logoLK" />
+            </div>
+            <div class="header__support">
+              <img src="./assets/img/support0icon.svg" alt="" class="support-icon" />
+              <div class="support-desc">
+                <p>HOTLINE HỖ TRỢ:</p>
+                <a href="tel:+84973979109" class="text-primary"><strong>097.397.9109</strong></a>
+              </div>
+            </div>
+          </div>
+        </header>
+        <!-- ////////////////////////////// after registration ///////////////////////////// -->
+        <div class="container section w500">
+          <!-- <div class="course-in-progess text-center box-with-border w700">
+            <h2 class="km-heading text-yel">Thông tin của bạn đã được ghi nhận!</h2>
+            <p class="km-text pb20">
+              Bạn kiểm tra email nhé, một email về thông tin khóa học đã được gửi đến:
+              <strong class="underline">minh.png@gmail.com</strong>
+            </p>
+
+            <p class="km-text">
+              Vui lòng <strong>BẤM</strong> vào nút bên dưới để XÁC NHẬN THÔNG TIN và tham gia nhóm ZALO
+            </p>
+            <a href="#group-zalo" class="btn">XÁC NHẬN THÔNG TIN</a>
+          </div> -->
+
+          <div class="course-end text-center box-with-border">
+            <h2 class="km-heading text-yel">Rất tiếc khóa học này đã kết thúc!</h2>
+            <p class="km-text">Bạn đã bỏ lỡ khóa học này rồi!</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="section text-center">
+      <div class="container">
+        <h1>Lang Kingdom</h1>
+        <p>470 North Bridge Road, <span class="inline">#05-12 Bugis Cube,</span> Singapore (188735)</p>
+        <p>
+          <i class="far fa-registered icon"></i>
+          2022 Lang Kingdom Pte. Ltd. <span class="inline">All Rights Reserved.</span>
+        </p>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      function countDownFor1Day(selector) {
+        let endOfDay = new Date();
+        endOfDay.setHours(23, 59, 59, 999);
+        let x = setInterval(function () {
+          let countDownDay = endOfDay.getTime();
+
+          let now = new Date().getTime();
+
+          let distance = countDownDay - now;
+
+          const endDay = document.querySelector(selector);
+          if (!endDay) return;
+
+          if (distance > 0) {
+            let hours = Math.floor(distance / (1000 * 60 * 60));
+            let mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let secs = Math.floor((distance % (1000 * 60)) / 1000);
+            endDay.innerHTML = `<span class="countdown-number">${hours}</span>
+              : <span class="countdown-number">${mins}</span> : <span class="countdown-number">${secs}</span>`;
+          } else {
+            countDownFor1Day(selector);
+          }
+        }, 1000);
+      }
+
+      function countDown(selector, date) {
+        let endDay = new Date(date).getTime();
+        let x = setInterval(function () {
+          let now = new Date().getTime();
+
+          let distance = endDay - now;
+
+          const countDownEle = document.querySelector(selector);
+          if (!countDownEle) return;
+
+          if (distance > 0) {
+            let hours = Math.floor(distance / (1000 * 60 * 60));
+            let mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let secs = Math.floor((distance % (1000 * 60)) / 1000);
+            countDownEle.innerHTML = `<span class="countdown-number">${hours}</span>
+              : <span class="countdown-number">${mins}</span> : <span class="countdown-number">${secs}</span>`;
+          } else {
+          }
+        }, 1000);
+      }
+
+      countDownFor1Day("#endDay-countdown");
+      countDown("#course-countdown", "July 15, 2022 15:37:25");
+
+      // swiper
+
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+
+        autoplay: {
+          delay: 5000,
+          pauseOnMouseEnter: true,
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+          rewind: true,
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        breakpoints: {
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 50,
+          },
+
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 60,
+          },
+        },
+      });
+
+      // phone dropdown
+      const phoneInputField = document.querySelector("#phone");
+      const phoneInput = window.intlTelInput(phoneInputField, {
+        preferredCountries: ["vn", "us"],
+        utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+      });
+    </script>
+  </body>
+</html>

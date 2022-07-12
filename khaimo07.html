@@ -22,6 +22,8 @@
   </head>
   <body>
     <main>
+
+      
       <section class="section showcase">
         <header class="km-header">
           <div class="container">
@@ -37,7 +39,47 @@
             </div>
           </div>
         </header>
-        <div class="container">
+        <!-- ////////////////////////////// after registration ///////////////////////////// -->
+        <div class="after-registration container section">
+          <!-- <div class="course-in-progess text-center box-with-border w700">
+            <h2 class="km-sec-heading text-yel">Đăng ký thành công!</h2>
+            <p class="km-heading">Buổi học 1: Khai mở - Vì sao học cả đời vẫn không giỏi tiếng Anh?</p>
+            <p class="km-text">Ngày: <span class="text-yel strong">17/07/2022</span> - Thời gian: <span class="text-yel strong">8 PM</span></p>
+            <p class="km-text">Buổi học bắt đầu sau:</p>
+            <h2 id="course-countdown" class="km-heading text-yel">
+              <span class="countdown-number">15</span>
+              : <span class="countdown-number">25</span> : <span class="countdown-number">55</span>
+            </h2>
+  
+            <p class="km-text">Lưu ý: Lớp học sẽ <span class="text-yel">TỰ ĐỘNG được mở ra ở ngay đây</span> khi đến giờ. Xin đừng đóng trình duyệt.</p>
+            <p class="km-text">*Phần <span class="text-yel">QUÀ TẶNG KÈM</span> khóa học <strong>"10 ngày nắm vững phát âm IPA và đọc từ điển"</strong> (Trị giá <span class="text-yel">2.000.000 VNĐ</span>) <span class="text-yel">CHỈ được tặng</SPAN> sau khi bạn tham dự hết buổi học này!</p>
+          </div> -->
+
+          <!-- BUỔI RÚT GỌN -->
+          <div class="course-in-progess text-center box-with-border w700">
+            <p class="km-heading">Khóa học khai mở <span class="text-yel">RÚT GỌN</span> - Cơ hội thứ 2 cho bạn, đừng bỏ lỡ!</p>
+            <p class="km-text">Chỉ một buổi duy nhất!</p>
+            <p class="km-text">Ngày: <span class="text-yel strong">17/07/2022</span> - Thời gian: <span class="text-yel strong">8 PM</span></p>
+            <a href="#register" class="btn">Tôi đăng ký tham gia</a>
+            
+          </div>
+
+
+          <!-- KẾT THÚC  -->
+          <!-- <div class="course-end text-center box-with-border w700">
+            <h2 class="km-heading text-yel">Rất tiếc khóa học này đã kết thúc!</h2>
+            <p class="km-text">Bạn đã bỏ lỡ khóa học này rồi!</p>
+          </div> -->
+
+          <div class="divider section">
+            <div class="container text-center">
+              <img src="./assets/img/divider.svg" class="divider-item" alt="">
+            </div>
+          </div>
+        </div>
+
+        <!-- ///////////////////////////////////////////////////// -->
+        <div class="container showcase-main">
           <div class="showcase-content">
             <h3 class="km-sub-heading">CHÚ Ý: BUỔI CHIA SẺ DÀNH RIÊNG CHO NHÓM ĐỘC QUYỀN NÀY VÀ QUÀ TẶNG CÓ THỂ NGƯNG BẤT KỲ LÚC NÀO,</h3>
             <h1 class="km-heading big">
@@ -377,7 +419,7 @@
       <section class="section course">
         <div class="container text-center">
           <div class="course-wrapper">
-            <div class="course__info">
+            <div class="course__info box-with-border">
               <div class="course__info-item">
                 <h2 class="km-sec-heading">KHOÁ HỌC SẼ BẮT ĐẦU VÀO</h2>
                 <p class="km-text text-yel strong">Thứ 4, Ngày 29 Tháng 06 Năm 2022</p>
@@ -552,7 +594,7 @@
   </footer>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
-      function countDownForDay(selector) {
+      function countDownFor1Day(selector) {
         let endOfDay = new Date();
         endOfDay.setHours(23, 59, 59, 999);
         let x = setInterval(function () {
@@ -572,12 +614,36 @@
             endDay.innerHTML = `<span class="countdown-number">${hours}</span>
               : <span class="countdown-number">${mins}</span> : <span class="countdown-number">${secs}</span>`;
           } else {
-            countDownForDay(selector);
+            countDownFor1Day(selector);
           }
         }, 1000);
       }
 
-      countDownForDay("#endDay-countdown");
+      function countDown(selector, date) {
+        let endDay = new Date(date).getTime();
+        let x = setInterval(function () {
+          
+          let now = new Date().getTime();
+
+          let distance = endDay - now;
+
+          const countDownEle = document.querySelector(selector);
+          if (!countDownEle) return;
+
+          if (distance > 0) {
+            let hours = Math.floor(distance / (1000 * 60 * 60));
+            let mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            let secs = Math.floor((distance % (1000 * 60)) / 1000);
+            countDownEle.innerHTML = `<span class="countdown-number">${hours}</span>
+              : <span class="countdown-number">${mins}</span> : <span class="countdown-number">${secs}</span>`;
+          } else {
+            
+          }
+        }, 1000);
+      }
+
+      countDownFor1Day("#endDay-countdown");
+      countDown('#course-countdown',"July 15, 2022 15:37:25")
 
       // swiper
 
