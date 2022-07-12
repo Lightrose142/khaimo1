@@ -41,12 +41,32 @@
         </header>
         <!-- ////////////////////////////// after registration ///////////////////////////// -->
         <div class="after-registration container section">
+          
+          <!-- ĐÃ ĐĂNG KÝ: BUỔI 1/2/RÚT GỌN -->
+          
           <!-- <div class="course-in-progess text-center box-with-border w700">
+            
             <h2 class="km-sec-heading text-yel">Đăng ký thành công!</h2>
-            <p class="km-heading">Buổi học 1: Khai mở - Vì sao học cả đời vẫn không giỏi tiếng Anh?</p>
+            
+            <p class="km-heading">Buổi học 1: Khai mở - Vì sao học cả đời vẫn không giỏi tiếng Anh?</p>            
             <p class="km-text">Ngày: <span class="text-yel strong">17/07/2022</span> - Thời gian: <span class="text-yel strong">8 PM</span></p>
             <p class="km-text">Buổi học bắt đầu sau:</p>
-            <h2 id="course-countdown" class="km-heading text-yel">
+            <h2 countdown id="course-countdown" class="km-heading text-yel">
+              <span class="countdown-number">15</span>
+              : <span class="countdown-number">25</span> : <span class="countdown-number">55</span>
+            </h2>
+  
+            <p class="km-text">Lưu ý: Lớp học sẽ <span class="text-yel">TỰ ĐỘNG được mở ra ở ngay đây</span> khi đến giờ. Xin đừng đóng trình duyệt.</p>
+            <p class="km-text">*Phần <span class="text-yel">QUÀ TẶNG KÈM</span> khóa học <strong>"10 ngày nắm vững phát âm IPA và đọc từ điển"</strong> (Trị giá <span class="text-yel">2.000.000 VNĐ</span>) <span class="text-yel">CHỈ được tặng</SPAN> sau khi bạn tham dự hết buổi học này!</p>
+          </div> -->
+          
+          <!-- CHƯA ĐĂNG KÍ CÒN 30' -->
+          <!-- <div class="course-in-progess text-center box-with-border w700">
+            
+            <p class="km-heading">Buổi học 1: Khai mở - Vì sao học cả đời vẫn không giỏi tiếng Anh?</p>            
+            <p class="km-text">Ngày: <span class="text-yel strong">17/07/2022</span> - Thời gian: <span class="text-yel strong">8 PM</span></p>
+            <p class="km-text">Buổi học bắt đầu sau:</p>
+            <h2 countdown id="course-countdown" class="km-heading text-yel">
               <span class="countdown-number">15</span>
               : <span class="countdown-number">25</span> : <span class="countdown-number">55</span>
             </h2>
@@ -55,21 +75,22 @@
             <p class="km-text">*Phần <span class="text-yel">QUÀ TẶNG KÈM</span> khóa học <strong>"10 ngày nắm vững phát âm IPA và đọc từ điển"</strong> (Trị giá <span class="text-yel">2.000.000 VNĐ</span>) <span class="text-yel">CHỈ được tặng</SPAN> sau khi bạn tham dự hết buổi học này!</p>
           </div> -->
 
-          <!-- BUỔI RÚT GỌN -->
-          <div class="course-in-progess text-center box-with-border w700">
-            <p class="km-heading">Khóa học khai mở <span class="text-yel">RÚT GỌN</span> - Cơ hội thứ 2 cho bạn, đừng bỏ lỡ!</p>
-            <p class="km-text">Chỉ một buổi duy nhất!</p>
-            <p class="km-text">Ngày: <span class="text-yel strong">17/07/2022</span> - Thời gian: <span class="text-yel strong">8 PM</span></p>
-            <a href="#register" class="btn">Tôi đăng ký tham gia</a>
-            
-          </div>
+
+
+          <!-- BUỔI RÚT GỌN CHƯA ĐĂNG KÝ -->
+          <!-- <div class="course-in-progess text-center box-with-border w700">
+            <p class="km-heading">Khóa học khai mở <span class="underline">RÚT GỌN</span> - <span class="text-yel">Cơ hội thứ 2</span> cho bạn, đừng bỏ lỡ!</p>
+            <p class="km-text text-yel">CHỈ 1 BUỔI DUY NHẤT!</p>
+            <p class="km-text pb10">Ngày: <span class="text-yel strong">17/07/2022</span> - Thời gian: <span class="text-yel strong">8 PM</span></p>
+            <a href="#register" class="btn">Tôi đăng ký tham gia</a>            
+          </div> -->
 
 
           <!-- KẾT THÚC  -->
-          <!-- <div class="course-end text-center box-with-border w700">
+          <div class="course-end text-center box-with-border w700">
             <h2 class="km-heading text-yel">Rất tiếc khóa học này đã kết thúc!</h2>
             <p class="km-text">Bạn đã bỏ lỡ khóa học này rồi!</p>
-          </div> -->
+          </div>
 
           <div class="divider section">
             <div class="container text-center">
@@ -619,7 +640,7 @@
         }, 1000);
       }
 
-      function countDown(selector, date) {
+      function countDownForCourse(element, date) {
         let endDay = new Date(date).getTime();
         let x = setInterval(function () {
           
@@ -627,14 +648,14 @@
 
           let distance = endDay - now;
 
-          const countDownEle = document.querySelector(selector);
-          if (!countDownEle) return;
+          
+          if (!element) return;
 
           if (distance > 0) {
             let hours = Math.floor(distance / (1000 * 60 * 60));
             let mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             let secs = Math.floor((distance % (1000 * 60)) / 1000);
-            countDownEle.innerHTML = `<span class="countdown-number">${hours}</span>
+            element.innerHTML = `<span class="countdown-number">${hours}</span>
               : <span class="countdown-number">${mins}</span> : <span class="countdown-number">${secs}</span>`;
           } else {
             
@@ -642,8 +663,13 @@
         }, 1000);
       }
 
+      const countDownEle = document.querySelectorAll('[countdown]')
+      
+      Array.from(countDownEle).forEach((countdown) => {        
+        countDownForCourse(countdown,"July 15, 2022 15:37:25")
+      })
+
       countDownFor1Day("#endDay-countdown");
-      countDown('#course-countdown',"July 15, 2022 15:37:25")
 
       // swiper
 
