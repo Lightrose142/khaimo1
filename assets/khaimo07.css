@@ -216,13 +216,19 @@ strong {
 .underline::after {
   content: "";
   width: 100%;
-  height: 2.5px;
+  height: 2px;
   background-color: var(--clr-primary);
   border-radius: 100vw;
   position: absolute;
-  bottom: -1.5px;
+  bottom: -1px;
   transform: translateY(-50%);
   left: 0;
+  transition: 300ms;
+}
+
+.underline:hover:after,
+.underline:active:after {
+  width: 100%;
 }
 
 .support-icon {
@@ -247,19 +253,26 @@ strong {
   text-align: center;
   font-weight: 500;
   text-transform: uppercase;
+  transition: 300ms;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:active {
   transform: scale(0.99);
   opacity: 0.9;
 }
 
-a:hover {
+a:hover,
+a:active {
   transform: scale(0.99);
 }
 
 .text-center {
   text-align: center;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .km-key-text {
