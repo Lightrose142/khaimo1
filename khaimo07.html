@@ -22,8 +22,6 @@
   </head>
   <body>
     <main>
-
-      
       <section class="section showcase">
         <header class="km-header">
           <div class="container">
@@ -41,29 +39,29 @@
         </header>
         <!-- ////////////////////////////// after registration ///////////////////////////// -->
         <div class="after-registration container section">
-          
+
           <!-- ĐÃ ĐĂNG KÝ: BUỔI 1/2/RÚT GỌN -->
-          
+
           <!-- <div class="course-in-progess text-center box-with-border w700">
-            
+
             <h2 class="km-sec-heading text-yel">Bạn đã đăng ký thành công!</h2>
-            
-            <p class="km-heading">Buổi học 1: Khai mở - Vì sao học cả đời vẫn không giỏi tiếng Anh?</p>            
+
+            <p class="km-heading">Buổi học 1: Khai mở - Vì sao học cả đời vẫn không giỏi tiếng Anh?</p>
             <p class="km-text">Ngày: <span class="text-yel strong">17/07/2022</span> - Thời gian: <span class="text-yel strong">8 PM</span></p>
             <p class="km-text">Buổi học bắt đầu sau:</p>
             <h2 countdown id="course-countdown" class="km-heading text-yel">
               <span class="countdown-number">15</span>
               : <span class="countdown-number">25</span> : <span class="countdown-number">55</span>
             </h2>
-  
+
             <p class="km-text"><strong>Lưu ý:</strong> Lớp học sẽ <span class="text-yel">TỰ ĐỘNG được mở ra ở ngay đây</span> khi đến giờ. Xin đừng đóng trình duyệt.</p>
             <p class="km-text"><span class="text-yel">QUÀ TẶNG KÈM</span>, khoá học <strong>"10 ngày nắm vững phát âm IPA giọng bản xứ và đọc làu làu từ điển"</strong> (Trị giá: 2.000.000 VNĐ) <span class="text-yel">CHỈ ĐƯỢC TẶNG</span> sau khi bạn tham dự hết buổi học này!</p>
           </div> -->
-          
+
           <!-- CHƯA ĐĂNG KÍ CÒN 30' -->
           <!-- <div class="course-in-progess text-center box-with-border w700">
-            
-            <p class="km-heading">Buổi học 1: Khai mở - Vì sao học cả đời vẫn không giỏi tiếng Anh?</p>            
+
+            <p class="km-heading">Buổi học 1: Khai mở - Vì sao học cả đời vẫn không giỏi tiếng Anh?</p>
             <p class="km-text">Ngày: <span class="text-yel strong">17/07/2022</span> - Thời gian: <span class="text-yel strong">8 PM</span></p>
             <p class="km-text">Buổi học bắt đầu sau:</p>
             <h2 countdown id="course-countdown" class="km-heading text-yel">
@@ -184,7 +182,7 @@
                 *QUÀ TẶNG ĐẶC BIỆT CHỈ DÀNH CHO NGƯỜI ĐẶC BIỆT VÀO CUỐI BUỔI HỌC
               </p>
             </div>
-            
+
             <a href="#register" class="btn">Tôi đăng ký tham gia</a>
           </div>
           <div class="showcse-person">
@@ -559,14 +557,14 @@
               <p class="km-text text-red">Nếu bạn bỏ lỡ khoá học, bạn sẽ KHÔNG THỂ đăng ký lại!</p>
               <p class="km-text">Xin điền thông tin email, số điện thoại chính xác để nhận thông tin khoá học</p>
             </div>
-  
+
             <form class="text-center" id="registor" action="">
               <input id="phone" type="tel" name="phone" placeholder="*Số điện thoại..."/>
               <input type="text" name="name" placeholder="*Tên của bạn..."/>
               <input type="email" name="email" placeholder="*Email của bạn..."/>
               <button class="btn" type="submit">Tôi đăng ký tham gia</button>
             </form>
-  
+
             <div class="form-cta">
               <p class="km-text">
                 <strong class="text-blue">Lưu ý:</strong
@@ -588,8 +586,8 @@
       <!--//////////////////////// ABOUT SECTION///////////////////////////  -->
       <section class="about section">
         <div class="container">
-            <div class="about-info">
-                <img src="./assets/img/person.png" alt="">                
+            <div class="about-info">DX
+                <img src="./assets/img/person.png" alt="">
             </div>
             <div class="about-content w700">
                 <h2 class="km-heading text-center text-primary">
@@ -660,7 +658,7 @@
       <div class="container">
           <h1>Lang Kingdom</h1>
           <p>470 North Bridge Road, <span class="inline">#05-12 Bugis Cube,</span> Singapore (188735)</p>
-          <p> 
+          <p>
               <i class="far fa-registered icon"></i>
               2022 Lang Kingdom Pte. Ltd. <span class="inline">All Rights Reserved.</span>
           </p>
@@ -696,12 +694,12 @@
       function countDownForCourse(element, date) {
         let endDay = new Date(date).getTime();
         let x = setInterval(function () {
-          
+
           let now = new Date().getTime();
 
           let distance = endDay - now;
 
-          
+
           if (!element) return;
 
           if (distance > 0) {
@@ -711,14 +709,13 @@
             element.innerHTML = `<span class="countdown-number">${hours}</span>
               : <span class="countdown-number">${mins}</span> : <span class="countdown-number">${secs}</span>`;
           } else {
-            
+
           }
         }, 1000);
       }
 
       const countDownEle = document.querySelectorAll('[countdown]')
-      
-      Array.from(countDownEle).forEach((countdown) => {        
+      Array.from(countDownEle).forEach((countdown) => {
         countDownForCourse(countdown,"July 15, 2022 15:37:25")
       })
 
@@ -764,6 +761,8 @@
         preferredCountries: ["vn", "us"],
         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
       });
+
+
     </script>
   </body>
 </html>
