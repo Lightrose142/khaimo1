@@ -22,6 +22,8 @@
   </head>
   <body>
     <main>
+
+
       <section class="section showcase">
         <header class="km-header">
           <div class="container">
@@ -586,7 +588,7 @@
       <!--//////////////////////// ABOUT SECTION///////////////////////////  -->
       <section class="about section">
         <div class="container">
-            <div class="about-info">DX
+            <div class="about-info">
                 <img src="./assets/img/person.png" alt="">
             </div>
             <div class="about-content w700">
@@ -715,11 +717,16 @@
       }
 
       const countDownEle = document.querySelectorAll('[countdown]')
+
       Array.from(countDownEle).forEach((countdown) => {
         countDownForCourse(countdown,"July 15, 2022 15:37:25")
       })
 
       countDownFor1Day("#endDay-countdown");
+
+      const result = [2, 5]
+
+      result;
 
       // swiper
 
@@ -761,8 +768,6 @@
         preferredCountries: ["vn", "us"],
         utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
       });
-
-
     </script>
   </body>
 </html>
