@@ -262,6 +262,12 @@ strong {
   opacity: 0.9;
 }
 
+.btn.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  color: var(--clr-white);
+}
+
 a:hover,
 a:active {
   transform: scale(0.99);
@@ -405,6 +411,10 @@ ul div i {
       margin bottom
   ============================================================ */
 
+.mb0 {
+  margin-bottom: 0;
+}
+
 .mb10 {
   margin-bottom: 10px;
 }
@@ -460,7 +470,7 @@ ul div i {
 ============================================================ */
 
 .showcase {
-  background-image: url("../assets/img/background.jpg"), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  background-image: url("/assets/img/background.jpg"), linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
   background-size: cover;
   background-position: top left;
   background-blend-mode: overlay;
@@ -511,7 +521,7 @@ ul div i {
 ============================================ */
 
 .testimonial {
-  background-image: url("../assets/img/background-review.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-image: url("/assets/img/background-review.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover;
   background-position: top left;
   background-blend-mode: overlay;
@@ -600,7 +610,7 @@ ul div i {
 ============================================================ */
 
 .course {
-  background-image: url("../assets/img/background-review.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-image: url("/assets/img/background-review.jpg"), linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   background-size: cover;
   background-position: top left;
   background-blend-mode: overlay;
@@ -679,6 +689,15 @@ ul div i {
   background-color: rgba(255, 255, 255, 0.05);
   min-width: 56px;
   display: inline-block;
+}
+
+.countdown-number.countdown-compact {
+  font-size: var(--fz-text);
+  min-width: revert;
+  font-weight: 500;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 /* =========================================

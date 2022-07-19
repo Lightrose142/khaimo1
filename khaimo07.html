@@ -43,7 +43,6 @@
         <div class="after-registration container section">
 
           <!-- ĐÃ ĐĂNG KÝ: BUỔI 1/2/RÚT GỌN -->
-
           <!-- <div class="course-in-progess text-center box-with-border w700">
 
             <h2 class="km-sec-heading text-yel">Bạn đã đăng ký thành công!</h2>
@@ -62,7 +61,6 @@
 
           <!-- CHƯA ĐĂNG KÍ CÒN 30' -->
           <!-- <div class="course-in-progess text-center box-with-border w700">
-
             <p class="km-heading">Buổi học 1: Khai mở - Vì sao học cả đời vẫn không giỏi tiếng Anh?</p>
             <p class="km-text">Ngày: <span class="text-yel strong">17/07/2022</span> - Thời gian: <span class="text-yel strong">8 PM</span></p>
             <p class="km-text">Buổi học bắt đầu sau:</p>
@@ -74,9 +72,7 @@
             <p class="km-text">Phần <span class="text-yel">QUÀ TẶNG KÈM</span> khóa học <strong>"10 ngày nắm vững phát âm IPA và đọc từ điển"</strong> (Trị giá <span class="text-yel">2.000.000 VNĐ</span>) <span class="text-yel">CHỈ được tặng</SPAN> sau khi bạn tham dự hết buổi học này!</p>
           </div> -->
 
-
-
-          <!-- BUỔI RÚT GỌN CHƯA ĐĂNG KÝ -->
+          <!-- BUỔI RÚT GỌN -->
           <div class="course-in-progess text-center box-with-border w700">
             <p class="km-heading text-yel">Buổi học khai mở RÚT GỌN
               <br>Cơ hội cuối dành cho bạn, đừng bỏ lỡ!</p>
@@ -125,9 +121,18 @@
                 <li>
                   <div class="list-wrap">
                     <span>5.</span>
-                    <p class="km-text">
-                      Được <span class="text-yel">tặng kèm</span> khoá học “<strong>60 điểm ngữ pháp lấy lại tất tần tật căn bản mà người ta không muốn hệ thống hoá cho bạn!</strong>” (Trị giá: <span class="text-yel">2.000.000 VNĐ</span>). Link thanh toán tại đây chỉ mở trong vòng 24h thôi bạn nhé!
-                    </p>
+                    <div class="">
+                      <p class="km-text mb0">
+                        Được <span class="text-yel">tặng kèm</span> khoá học “<strong>60 điểm ngữ pháp lấy lại tất tần tật căn bản mà người ta không muốn hệ thống hoá cho bạn!</strong>” (Trị giá: <span class="text-yel inline">2.000.000 VNĐ</span>). Link thanh toán tại đây chỉ mở trong vòng 24h thôi bạn nhé!
+                      </p>
+                      <div class="btn-with-countdown text-center">
+                        <a href="#register" class="btn">Đến trang thanh toán</a>
+                        <h2 id="endDay-countdown" class="km-heading text-yel">
+                          <span class="countdown-number countdown-compact">15</span>
+                          : <span class="countdown-number countdown-compact">25</span> : <span class="countdown-number countdown-compact">55</span>
+                        </h2>
+                      </div>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -135,7 +140,7 @@
                 Nếu bạn <strong>chưa từng tham dự</strong>, bạn nên tham dự xong khoá học này rồi hẳn mua hàng, hoặc chọn chương trình học ở bất kỳ đâu nhé.
               </p>
             </div>
-            <a href="#register" class="btn">Tôi đăng ký tham gia</a>
+            <a href="#register" class="btn btn-secondary">Vào xem buổi học</a>
           </div>
 
 
@@ -152,7 +157,7 @@
           </div>
         </div>
 
-        <!-- ///////////////////////////////////////////////////// -->
+        <!-- /////////////////////// Main content ////////////////////////////// -->
         <div class="container showcase-main">
           <div class="showcase-content">
             <h3 class="km-sub-heading">CHÚ Ý: BUỔI CHIA SẺ DÀNH RIÊNG CHO NHÓM ĐỘC QUYỀN NÀY VÀ QUÀ TẶNG CÓ THỂ NGƯNG BẤT KỲ LÚC NÀO</h3>
@@ -722,11 +727,7 @@
         countDownForCourse(countdown,"July 15, 2022 15:37:25")
       })
 
-      countDownFor1Day("#endDay-countdown");
-
-      const result = [2, 5]
-
-      result;
+      // countDownFor1Day("#endDay-countdown");
 
       // swiper
 
