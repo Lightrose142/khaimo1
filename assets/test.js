@@ -1,44 +1,39 @@
-const firstSection = document.getElementById('firstSection')
+const firstSection = document.getElementById("firstSection");
 
-console.log(firstSection)
-const beforeFirstSection = document.createElement('section')
+// console.log(firstSection)
+const beforeFirstSection = document.createElement("section");
 
-beforeFirstSection.classList.add('section hello pwepwe')
+beforeFirstSection.classList.add("section hello pwepwe");
 
-beforeFirstSection.style.fontSize = '2rem'
+beforeFirstSection.style.fontSize = "2rem";
 
-beforeFirstSection.textContent = 'Hello this is added by javascrip'
+beforeFirstSection.textContent = "Hello this is added by javascrip";
 
-firstSection.before(beforeFirstSection)
+firstSection.before(beforeFirstSection);
 
-console.log(beforeFirstSection)
+console.log(beforeFirstSection);
 
 function createElement(element, classList) {
+  element = document.createElement(element);
 
-    element = document.createElement(element)
+  classList.forEach((className) => {
+    element.classList.add(`${className}`);
+  });
 
-    classList.forEach(className => {
+  const styles = {
+    style: "font-size: 50px; color: red; font-weight: 300",
+  };
 
-        element.classList.add(`${className}`)
-    })
+  for (let test in styles) {
+    console.log(`${test}: ${styles[test]}`);
+    element.setAttribute(test, styles[test]);
+  }
 
-    const styles = {
-        style: 'font-size: 50px; color: red; font-weight: 300'
-        
-    }
-    
-    for (let test in styles) {
-        console.log(`${test}: ${styles[test]}`)
-        element.setAttribute(test, styles[test])
-    }
-
-    return element
-
+  return element;
 }
 
-const elementTest = createElement('h1', ['section', 'test1', 'test2'])
+const elementTest = createElement("h1", ["section", "test1", "test2"]);
 
-elementTest.textContent = 'Hello this is added by javascrip'
+elementTest.textContent = "Hello this is added by javascrip";
 
-firstSection.before(elementTest)
-
+firstSection.before(elementTest);

@@ -1,133 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/testVideo.css">
+    <link rel="stylesheet" href="./assets/testVideo.css" />
     <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        width: min(100% - 2rem, 800px);
+        margin-inline: auto;
+        background-color: pink;
+      }
 
-        * {
-            box-sizing: border-box;
-        }
-        .container {
-            width: min(100% - 2rem, 800px);
-            margin-inline: auto;
-            background-color: pink;
-            
-        }
+      .video-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+      }
 
-        .video-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0 auto;            
-        }
+      .video-wrapper iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        margin: 0 auto;
+        transition: 300ms;
+      }
 
-        .video-wrapper iframe {
-            width: 100%;
-            aspect-ratio: 16 / 9;
-            margin: 0 auto;
-            transition: 300ms;
-            
-        }
+      .text-truncate {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: clip;
+        word-break: break-word;
+        transition: 300ms;
+      }
 
-        .text-truncate {
-            display:-webkit-box;
-            -webkit-line-clamp:3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: clip;
-            word-break: break-word;
-            transition: 300ms;
-        }
+      .toogle-expand {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        font-size: 15px;
+        color: #2488f6;
+        font-weight: bold;
+        display: inline-block;
+        cursor: pointer;
+        transition: 150ms;
+      }
 
-        .toogle-expand {
-            background-color: transparent;
-            outline: none;
-            border: none;
-            font-size: 15px;
-            color: #2488f6;
-            font-weight: bold;
-            display: inline-block;
-            cursor: pointer;
-            transition: 150ms;
-        }
+      .toogle-expand:hover {
+        filter: brightness(0.5);
+      }
 
-        .toogle-expand:hover {
-            filter: brightness(0.5)
-        }
-
-
+      .popped-video {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: min(100%, 500px);
+      }
     </style>
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="video-wrapper">
-            <iframe id="videoFrame" src="https://www.youtube.com/embed/cw21m2S5PXQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div style="height: 5000px; background-color: #999">
-            <p class="text-wrap" style="width: 200px;"><span id="course-desc" class="text-truncate">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum dolores aperi perferendis, molestiae, ex eveniet illo nihil odio, facilis ducimus natus nobis culpa repudiandae laborum. Earum nostrum corrupti voluptatem rem!</span><button class="toogle-expand">...more</button></p>
-                      
-        </div>
+      <div class="video-wrapper">
+        <iframe
+          id="videoFrame"
+          src="https://www.youtube.com/embed/cw21m2S5PXQ"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <button id="popup-btn">pop video</button>
+      <div style="height: 5000px; background-color: #999">
+        <p class="text-wrap" style="width: 200px">
+          <span id="course-desc" class="text-truncate"
+            >Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum dolores aperi perferendis, molestiae, ex
+            eveniet illo nihil odio, facilis ducimus natus nobis culpa repudiandae laborum. Earum nostrum corrupti
+            voluptatem rem!</span
+          ><button class="toogle-expand">...more</button>
+        </p>
+      </div>
     </div>
 
-
     <script>
-        const videoPlayer = document.querySelector('#videoFrame')
-        let videoWidth = videoPlayer.offsetWidth;
-        const videoWrapper = document.querySelector('.video-wrapper')
+      const videoPlayer = document.querySelector("#videoFrame");
+      let videoWidth = videoPlayer.offsetWidth;
+      const videoWrapper = document.querySelector(".video-wrapper");
 
-        console.log(videoWidth);
+      console.log(videoWidth);
 
-        let maxWidth = 300
+      let maxWidth = 300;
 
-        let windowY = window.scrollY
-        document.onscroll = function() {
-            let newWindowY = window.scrollY
-            
-            if (newWindowY > windowY) {
-                videoPlayer.style.width = '200px'
-                console.log('len')
-                windowY = newWindowY
-                videoWrapper.style.position = 'fixed'
-                
-            } else {
-                console.log('xuong');
-                videoPlayer.style.width = `100%`
-                windowY = newWindowY
-                videoWrapper.style.position = 'revert'
-            }
-            
+      function togglePoppedOutVideo(element) {
+        let isPoppedOut = false;
+        if (element) {
+          element.classList.toggle("popped-video");
         }
+      }
 
-        
+      const poppedVideoBtn = document.querySelector("#popup-btn");
+      poppedVideoBtn.onclick = function () {
+        const playlistVideo = document.querySelector(".video-wrapper");
+        togglePoppedOutVideo(playlistVideo);
+      };
 
-        function showMore(expandBtn, classList,
-        text) {
-            const expandParent = expandBtn.previousElementSibling
-            console.log(expandParent);
-
-            expandParent.classList.toggle(classList)
-
-            text = {
-                text1: text.text1,
-                text2: text.text2
-            }
-            
-            if (expandParent.classList.contains(classList)) {
-                expandBtn.innerText = text.text1
-            } else {
-                expandBtn.innerText = text.text2
-            }
+      function hasReached(element) {
+        const playlistVideo = document.querySelector(".video-wrapper");
+        let topPosition = element.getBoundingClientRect().top;
+        console.log(element.offsetHeight);
+        if (window.scrollY > topPosition + element.offsetHeight - 200) {
+          togglePoppedOutVideo(playlistVideo);
         }
+      }
 
-        const expandBtn = document.querySelector('.toogle-expand')
-        expandBtn.onclick = function() {
-            showMore(expandBtn, 'text-truncate', text = {text1: 'more1', text2: 'more2'})
+      window.addEventListener("scroll", function () {
+        hasReached(videoWrapper);
+      });
+
+      //   let windowY = window.scrollY;
+      //   document.onscroll = function () {
+      //     let newWindowY = window.scrollY;
+
+      //     if (newWindowY > windowY) {
+      //       videoPlayer.style.width = "200px";
+      //       console.log("len");
+      //       windowY = newWindowY;
+      //       videoWrapper.style.position = "fixed";
+      //     } else {
+      //       console.log("xuong");
+      //       videoPlayer.style.width = `100%`;
+      //       windowY = newWindowY;
+      //       videoWrapper.style.position = "revert";
+      //     }
+      //   };
+
+      function toggleExpandBtn(expandBtn, classList, { showMore, showLess }) {
+        const expandBtnParent = expandBtn.previousElementSibling;
+        console.log(expandBtnParent);
+
+        expandBtnParent.classList.toggle(classList);
+
+        if (expandBtnParent.classList.contains(classList)) {
+          expandBtn.innerText = showMore;
+        } else {
+          expandBtn.innerText = showLess;
         }
+      }
+
+      const expandBtn = document.querySelector(".toogle-expand");
+      expandBtn.onclick = function () {
+        toggleExpandBtn(expandBtn, "text-truncate", { showMore: "...more", showLess: "...less" });
+      };
     </script>
-</body>
+  </body>
 </html>

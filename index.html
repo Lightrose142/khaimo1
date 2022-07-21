@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Khóa học khai mở MIỄN PHÍ cùng thầy Thắng Phạm</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
@@ -56,7 +56,7 @@
             <div class="countdown">
                 <div class="countdown-prefix">Bắt đầu sau:</div>
                 <div id="countdown" class="countdown-time">
-                    
+
                 </div>
             </div>
 
@@ -212,7 +212,7 @@
                 <p class="km-text pd10">
                     <span class="text-yel">Thứ 4, Ngày 29 Tháng 06 Năm 2022</span>
                 </p>
-    
+
                 <div class="info-wrap pd10">
                     <strong>Hình thức học:</strong>
                     <br>
@@ -226,7 +226,7 @@
 
                 <div class="course__time">
                     <p class="km-text">Theo giờ Việt Nam (GMT+7)</p>
-    
+
                     <div class="course__time-detail">
                         <div class="course__time-item">
                             <i class="fa-solid fa-calendar-days fa-bounce"></i>
@@ -253,14 +253,14 @@
                     <p class="km-text">Xin điền thông tin email, số điện thoại chính xác để nhận thông tin khoá học
                     </p>
                 </div>
-    
+
                 <form class="text-center" id="registor" action="">
                     <input id="phone" type="tel" name="phone" placeholder="*Số điện thoại..." required>
                     <input type="text" name="name" placeholder="*Tên của bạn..." required>
                     <input type="email" name="email" placeholder="*Email của bạn..." required>
                     <button class="btn" type="submit">Đăng ký tham gia<br>và nhận khóa học phát âm IPA 5 ngày</button>
                 </form>
-                
+
                 <div class="form-cta">
                     <p class="km-text"><strong class="text-blue">Lưu ý:</strong><span class="text-red"> Quà tặng <strong>CHỈ ĐƯỢC TẶNG</strong> sau khi bạn tham gia hết buổi học khai mở bạn đã đăng ký!</span></p>
                 </div>
@@ -281,13 +281,13 @@
                 <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
             </svg>
         </div>
-    </section>    
-    
+    </section>
+
     <!--//////////////////////// ABOUTSECTION///////////////////////////  -->
     <section class="about section">
         <div class="container">
             <div class="about-info">
-                <img src="./assets/img/person.png" alt="">                
+                <img src="./assets/img/person.png" alt="">
             </div>
             <div class="about-content">
                 <h2 class="km-heading text-center text-primary">
@@ -313,7 +313,7 @@
         <div class="container">
             <h1>Lang Kingdom</h1>
             <p>470 North Bridge Road, <span class="inline">#05-12 Bugis Cube,</span> Singapore (188735)</p>
-            <p> 
+            <p>
                 <i class="far fa-registered icon"></i>
                 2022 Lang Kingdom Pte. Ltd. <span class="inline">All Rights Reserved.</span>
             </p>
@@ -322,7 +322,7 @@
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </body>
 <script>
-    
+
     function countDownForDay(selector) {
         let endOfDay = new Date()
         endOfDay.setHours(23, 59, 59, 999)
@@ -336,7 +336,7 @@
 
             const endDay = document.querySelector(selector)
             if (!endDay) return
-                
+
             if (distance > 0) {
                 let hours = Math.floor(distance / (1000 * 60 * 60));
                 let mins = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
@@ -345,8 +345,8 @@
 
             } else {
                 countDownForDay()
-            
-        }           
+
+        }
 
         }, 1000)
 
@@ -382,14 +382,14 @@
                         <span class="countdown-number">${seconds}</span>
                         <span class="countdown-date">giây</span>
                         </div>`;
-        
+
         if (distance < 0) {
             clearInterval(x);
 
             document.getElementById("registration").innerHTML = `
                     <div class="container text-center">
                         <h2 class="pd10" style="color: var(--clr-red);">Rất tiếc khóa học này đã kết thúc rồi!</h2>
-                        
+
                         <div class="contact-support">
                             <p class="km-text">Liên hệ ngay hotline nếu bạn cần giúp đỡ:</p>
                             <span>
@@ -403,12 +403,12 @@
                     </div>`;
         }
     }, 1000);
-    
+
     // swiper
 
     const swiper = new Swiper('.swiper', {
         loop: true,
-        
+
         autoplay: {
             delay: 5000,
             pauseOnMouseEnter: true,
@@ -430,7 +430,7 @@
             slidesPerView: 1,
             spaceBetween: 50,
           },
-          
+
           1024: {
             slidesPerView: 1,
             spaceBetween: 60,
@@ -440,9 +440,9 @@
 
     // handle video playbtn and show/hide controls
     const video = document.getElementById('video')
-    
+
     const playBtn = document.querySelector('.play-icon')
-    
+
     video.onpause = function() {
     }
     video.onplay = function() {
@@ -452,7 +452,7 @@
     video.onclick = function() {
         video.setAttribute("controls","controls")}
 
-    
+
     // phone dropdown
     const phoneInputField = document.querySelector("#phone");
     const phoneInput = window.intlTelInput(phoneInputField, {
